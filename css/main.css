@@ -1,0 +1,5 @@
+html {
+  font-family: "Fredoka One", sans-serif;
+  background: repeating-linear-gradient(to top left, #c9fcff, #c9fcff 10px, #d4fdff 10px, #d4fdff 20px);
+  border-top: 12px #b3fbff solid;
+}
