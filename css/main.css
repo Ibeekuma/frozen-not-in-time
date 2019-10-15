@@ -90,6 +90,23 @@ p {
   max-width: 19em;
 }
 
+@media only screen and (min-width: 60em) {
+
+  h1 {
+    top: 1em;
+    left: .7em;
+  }
+
+  section {
+    max-height: 490px;
+  }
+
+  p {
+    margin-top: 3.5em;
+  }
+
+}
+
 @keyframes fly-in-cherry {
 
   from {
