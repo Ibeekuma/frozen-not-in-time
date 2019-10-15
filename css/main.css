@@ -1,187 +1,167 @@
 html {
   font-family: "Fredoka One", sans-serif;
-}
-
-body {
-  background: repeating-linear-gradient(to top left, #c9fcff, #c9fcff 10px, #d4fdff 10px, #d4fdff 20px);
-  border-top: 8px #b3fbff solid;
-}
-
-h1 {
-  color: #990073;
-  transform: rotate(-10.5deg);
-  text-shadow: 1px 1px rgba(0, 0, 0, .4)
-  left: 60px;
-  top: 80px;
-}
-
-p {
   color: #c09;
-  max-width: 20em;
-  transform: rotate(-5.5deg);
-  margin-top: 4em;
-  text-shadow: 1px 1px rgba(0, 0, 0, .4);
-  max-width: 19em;
+  background-image: repeating-linear-gradient(to top left, #c9fcff, #c9fcff 10px, #d4fdff 10px, #d4fdff 20px);
+  border-bottom: 10px solid #b3fbff;
+  border-top: 10px solid #b3fbff;
 }
 
-a {
-  color: #c09;
-  text-shadow: 1px 1px rgba(0, 0, 0, .4);
-  text-decoration: none;
+section {
+  max-height: 450px;
 }
 
-.cherry {
-  animation: cherry-drop .5s linear forwards;
-  animation-delay: 2s;
+img {
   width: 180px;
-  z-index: 6;
-  left: 70px;
-  top: -200px;
-}
-
-.text {
-  animation: text-appear .5s linear forwards;
-  animation-delay: 2.5s;
-  opacity: 0;
 }
 
 .btn-ghost {
+  color: #c09;
   border-color: #990073;
 }
 
 .btn-ghost:hover {
-  background-color: #d4fdff;
-  border-color: #990073;
+  background-color: #c09;
 }
 
-.btn-ice-cream {
-  top: 350px;
-  left: 50px;
-  position: absolute;
-  border: 4px solid #c09;
-  color: #c09;
-  border-radius: 4px;
-  padding: .5em 1em;
+.max-width {
+  max-width: 19em;
 }
 
-.btn {
-  text-shadow: 1px 1px rgba(0, 0, 0, .4);
+.cherry {
+  z-index: 10;
+  top: -15em;
+  left: 3.5em;
+  animation: fly-in-cherry .25s linear forwards;
 }
 
-@keyframes cherry-drop {
-
-  0% {
-    top: -200px;
-  }
-
-  100% {
-    top: -45px;
-  }
-
+.v-fudge {
+  z-index: 9;
+  top: -20.3em;
+  left: 3.33em;
+  animation: fly-in-v-fudge .25s .15s linear forwards;
 }
 
-.vanilla {
-  animation: vanilla-drop .5s linear forwards;
-  animation-delay: 1.5s;
-  width: 180px;
-  z-index: 4;
-  left: 60px;
-  top: -200px;
+.ch-chip {
+  z-index: 8;
+  top: -30.75em;
+  left: 3.75em;
+  animation: fly-in-ch-chip .25s .25s linear forwards;
 }
 
-@keyframes vanilla-drop {
-
-  0% {
-    top: -200px;
-  }
-
-  100% {
-    top: 35px;
-  }
-
-}
-
-.chocolate {
-  animation: chocolate-drop .5s linear forwards;
-  animation-delay: 1s;
-  width: 180px;
-  z-index: 3;
-  left: 75px;
-  top: -200px;
-}
-
-@keyframes chocolate-drop {
-
-  0% {
-    top: -200px;
-  }
-
-  100% {
-    top: 110px;
-  }
-
-}
-
-.mint {
-  animation: mint-drop .5s linear forwards;
-  animation-delay: .5s;
-  width: 180px;
-  z-index: 1;
-  left: 70px;
-  top: -200px;
-}
-
-@keyframes mint-drop {
-
-  0% {
-    top: -200px;
-  }
-
-  100% {
-    top: 190px;
-  }
-
+.mt-chip {
+  top: -42em;
+  left: 3.5em;
+  animation: fly-in-mt-chip .25s .375s linear forwards;
 }
 
 .cone {
-  animation: cone-drop .5s linear forwards;
-  width: 180px;
-  z-index: 2;
-  left: 70px;
-  top: -200px;
+  z-index: 7;
+  top: -50em;
+  left: 3.5em;
+  animation: fly-in-cone .25s .4s linear forwards;
 }
 
-@keyframes cone-drop {
+.wrapper {
+  max-width: 56.5em;
+  margin-left: auto;
+  margin-right: auto;
+}
 
-  0% {
-    top: -200px;
+h1, p {
+  transform-origin: center;
+}
+
+h1, p, a {
+  filter: opacity(0);
+  text-shadow: 2px 3px rgba(0, 0, 0, .1);
+  animation: show .25s .5s linear forwards;
+}
+
+h1 {
+  transform: rotate(-10deg);
+  top: 60px;
+  left: 40px;
+  color: #990073;
+}
+
+p {
+  transform: rotate(-5deg);
+  margin-top: 3em;
+  max-width: 19em;
+}
+
+@keyframes fly-in-cherry {
+
+  from {
+    top: -15em;
   }
 
-  100% {
-    top: 300px;
+  to {
+    top: -1.75em;
   }
 
 }
 
-.text {
-  animation: text-appear .5s linear forwards;
-  animation-delay: 2.5s;
-  opacity: 0;
+@keyframes fly-in-v-fudge {
+
+  from {
+    top: -30.3em;
+  }
+
+  to {
+    top: -7.05em;
+  }
+
 }
 
-@keyframes text-appear {
+@keyframes fly-in-ch-chip {
+
+  from {
+    top: -25.75em;
+  }
+
+  to {
+    top: -12.5em;
+  }
+
+}
+
+@keyframes fly-in-mt-chip {
+
+  from {
+    top: -42em;
+  }
+
+  to {
+    top: -17.5em;
+  }
+
+}
+
+@keyframes fly-in-cone {
+
+  from {
+    top: -50em;
+  }
+
+  to {
+    top: -21.5em;
+  }
+
+}
+
+@keyframes show {
 
   0% {
-    opacity: 0;
+    filter: opacity(0) blur(5px);
   }
 
   50% {
-    filter: blur(5px);
+    filter: blur(10px);
   }
 
   100% {
-    opacity: 100;
-    filter: blur(0);
+    filter: opacity(100) blur(0);
   }
 
 }
